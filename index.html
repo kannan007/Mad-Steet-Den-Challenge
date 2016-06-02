@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="scratch.css">
+<title>Products Details</title>
+</head>
+<body ng-app="Mad" ng-controller="products">
+<div class="container">
+<div class="row">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-sm-offset-3 col-sm-6 checkboxlist">
+Categories:<label class="checkbox-inline" ng-repeat="category in categories">
+<input type="checkbox"  ng-model="catselected[category]">{{category}}
+</label><br>
+Order By:<select ng-model="selectedsort">
+<option value="price">Price</option>	
+<option value="-score">Score</option>
+</select>
+</div>
+</nav>
+</div>
+<div class="row">
+<div ng-if="!showmenu" class="col-sm-12 col-xs-12 showmenu">
+{{errormessage}}
+<img src="default.gif">
+</div>
+</div>
+<div ng-if="showmenu" class="row productdetailsfull">
+<div  class="col-sm-4" ng-repeat="product in productdetails | filter:filtercategories() | orderBy:selectedsort">
+<div class="productimage">
+<img class="img-responsive" alt="Loading wait" ng-src="{{product.img}}">
+</div>
+<div class="productcontent">
+<h2>{{product.name}}</h2>
+<h4><span class="label label-primary">{{product.cat}}</span></h4>
+<h4><span class="badge">{{product.price | currency:'&#8377;'}}</span></h4>
+</div>	
+</div>
+<div ng-if="!showsecondmenu" class="col-sm-12 col-xs-12 showsecondmenu">
+{{errormessage}}
+<img src="default.gif">
+</div>
+<button class="btn btn-primary col-sm-12 col-xs-12" ng-click="getagain()">Load More</button>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
