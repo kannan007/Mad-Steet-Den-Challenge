@@ -1,0 +1,85 @@
+body
+{
+	margin-top: 60px;
+	background: #413630;
+}
+nav
+{
+	padding: 10px;
+	display: none;
+}
+.showmenu img
+{
+	display: block;
+	margin: 200px auto;
+	width: 100px;
+	height: 120px;
+}
+.showsecondmenu img
+{
+	display: block;
+	margin: 30px auto;
+	width: 100px;
+	height: 120px;
+}
+.checkboxlist
+{
+	position: relative;
+	color: rgba(122,240,0,0.7);	
+	font-size: 20px;
+}
+input[type="checkbox"]
+{
+	height: 25px;
+}
+@media only screen and (max-width: 500px) {
+    .checkbox-inline{
+        width: 100%;
+    }
+}
+.checkbox-inline
+{
+	padding-left: 30px;
+	font-color: rgba(122,240,0,0.7);
+}
+select
+{
+	margin-left: 20px;
+}
+.productdetailsfull
+{
+	padding: 40px;
+	margin-top: 60px; 
+}
+.col-sm-4
+{
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.productimage img
+{
+	height: 340px;
+	width: 100%;
+}
+.productcontent h2
+{
+	text-align: center;
+	text-transform: capitalize;
+	color: rgba(122,240,0,0.7);
+}
+.productcontent h4
+{
+	text-align: center;
+}
+.label 
+{
+	font-size: 20px;
+	text-transform: capitalize;
+}
+.badge 
+{
+	font-size: 20px;
+}
+button
+{
+}
