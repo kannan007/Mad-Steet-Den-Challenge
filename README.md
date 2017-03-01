@@ -1,2 +1,9 @@
 # Mad-Steet-Den-Challenge
-A single Page Ecommerce site. It will display 1000 products data will be fetched from JSON file.Initially it will display 9 products only so i have implemented pagination using infinite scroll. Products can be displayed based on categories too i have provided checkbox.
+
+  ## What is this about?
+   A single Page Responsive Ecommerce site created by using AngularJS,HTML and CSS.
+   It Fetches Products from API and renders into the web page. An user can sort the products based on Price or Score.
+   An user also categories the product checkbox have been provided for users
+   Initially it will render 9 products once the user reach the end of the page the next set of products(9) will append to the page i have    implemented pagination using infinite scroll.
+  ## How To Run?
+    Just open index.html in any browser
